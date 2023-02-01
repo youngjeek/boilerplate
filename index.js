@@ -3,8 +3,8 @@ const app = express();
 const port = 5000;
 
 //mongoose objectModeling Tool을 활용 mongoDB
-const urlDB =
-  'mongodb+srv://boilerplate:zlLgj0J3mZwlEkuY@boilerplate.mdpyam6.mongodb.net/?retryWrites=true&w=majority';
+require('dotenv').config();
+const urlDB = process.env.REACT_APP_DB_URL;
 
 const mongoose = require('mongoose'); //$npm install mongoose --save
 mongoose.set('strictQuery', true);
